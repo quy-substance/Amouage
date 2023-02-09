@@ -1,0 +1,9 @@
+
+# AuthUserfile /home/peekazoo/naturesprotection.jp/public_html/whitedog_subsc/.htpasswd
+# AuthGroupfile /dev/null
+# AuthName "Please enter your ID and password"
+# AuthType Basic
+# require valid-user
+
+
+# END WordPress

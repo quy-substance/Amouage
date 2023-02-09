@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+$breakpoint-sp: 767px;
+$breakpoint-pc: 1180px;
+
+/* Colors
+===================================================== */
+$color-text: #222222;
+$color-title: #000;
+$color-link: #D92634;
+$color-active: #f17d00;
+$green: #18AA4F;
+$yellow: #FFDC65;
+$red: #DB665B;
+$base-text: "Hiragino Mincho ProN";
+$head-text: "le-monde-livre-classic-byol", serif;
+$blue: #009fe8;
+$orange: #f17d00;
+$yellow: #f6dc03;
+$green: #42a645;
+$lightorange: #EDAB18;
+$lightgreen: #17B55D;
+
+/* Fontsize
+===================================================== */
+$fontsize-text: 1.4rem;
+$fontsize-subtitle: 1.8rem;
+$fontsize-title: 2rem;
+$fontsize-lead: 1.4rem;
+$lineheight-text: 2;
+$lineheight-title: 1.6;
+$lineheight-lead: 2;
+
+/* Layout
+===================================================== */
+$max-width: 1180px;
+$min-width: 1180px;
+$section-padding: 120px;
+$section-inner-padding: 40px;
+
+/* Animation setting
+===================================================== */
+$animation-speed: 0.25s;
+$animation-easing: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+/* Helper / Don't Edit
+===================================================== */
+$column-sizes: (
+  2: 50%,
+  3: 33.333%,
+  4: 25%,
+  5: 20%,
+  6: 16.6666666667%
+);
+$column-sizes-sp: (
+  2: 100%,
+  3: 50%,
+  4: 50%,
+  5: 50%,
+  6: 33.333%
+);

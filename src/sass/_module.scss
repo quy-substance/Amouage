@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+@import "config";
+@import "function";
+
+/* PC/SP Display Controls.
+============================*/
+.pc {
+  display: block;
+}
+.sp {
+  display: none;
+}
+@include sp {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+}
+/* columns - flex-box
+============================*/
+.columns{
+  display: flex;
+  @each $column, $size in $column-sizes {
+      &[data-column="#{$column}"]>* {
+          width: $size;
+      }
+  }
+  @include sp {
+      @each $column,
+      $size in $column-sizes-sp {
+          &[data-column="#{$column}"]>* {
+              width: $size;
+          }
+      }
+  }
+}
+
+/* Cover image + Contents
+============================*/
+.cover-image{
+  position: relative;
+  figure{
+    width: 100%;
+    height: 100%;
+    img{
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  >*{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &.left{
+    >*{
+      justify-content:flex-start;
+    }
+  }
+  &.bottom{
+    >*{
+      align-items:flex-end;
+    }
+  }
+}
+
+/* .wide-image
+============================*/
+.wide-image{
+  position: relative;
+  figure{
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    img{
+      @include objectFit(cover);
+    }
+  }
+}
