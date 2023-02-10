@@ -163,5 +163,19 @@ $(document).ready(function ($) {
     $('.c-dropFilter__title span').html(value);
     $('.c-dropFilter__List').slideUp();
   })
+  // silder thumbnail girls list detail
+  $('.js-sliderThumnail').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: false,
+    infinite: true,
+    dots: true,
+    fade: true,
+    arrows: false,
+    customPaging: function (slider, i) {
+      return '<button><span style="background-image:url(' + $(slider.$slides[i]).data('thumb') + ');"></span></button>';
+    }
+  });
 });
 
