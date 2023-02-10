@@ -142,3 +142,145 @@
 
 /* Girls List detail
 ===================================================== */
+.p-girlsList--detail {
+  .c-deatailImage {
+    .slick-dots {
+      margin-top: 15px;
+      margin-bottom: 38px;
+      display: flex;
+      flex-wrap: nowrap;
+      padding-left: 30px;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      li {
+        flex: 0 0 73px;
+        width: 73px;
+        margin-right: 8px;
+
+        &:last-child {
+          margin-right: 30px;
+        }
+
+
+        button {
+          cursor: pointer;
+          position: relative;
+          border: 1px solid transparent;
+
+        }
+
+        &.slick-active {
+          button {
+            border-color: #222222;
+          }
+        }
+
+        span {
+          display: block;
+          width: 73px;
+          height: 97px;
+          background-size: contain;
+        }
+      }
+    }
+  }
+
+  .c-girlsTag {
+    margin-bottom: 24px;
+
+    span {
+      display: inline-block;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 11px;
+      background: #F3F3F3;
+      font-weight: 700;
+
+      &:first-child {
+        background: #9F8967;
+        color: #fff;
+      }
+    }
+  }
+
+  .c-girlsMeta {
+    h2 {
+      font-size: 1.2rem;
+      color: #9F8967;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 3px;
+      font-family: $base-text;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      font-family: $base-text;
+    }
+
+    .u-author {
+      font-size: 1rem;
+      font-family: $head-text;
+      color: #000000;
+      opacity: .4;
+    }
+
+    .sub-desc {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      border-top: 1px solid #E5E5E5;
+      border-bottom: 1px solid #E5E5E5;
+      padding: 13px 0;
+      line-height: 24px;
+    }
+
+    .description {
+      margin-top: 29px;
+      font-size: 1.2rem;
+      font-family: "Hiragino Mincho ProN";
+      line-height: 26px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .c-schedule {
+    margin: 53px 0;
+
+    h3 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      margin-bottom: 21px;
+    }
+
+    &__title {
+      display: flex;
+      background: #F3F3F3;
+
+      span {
+        display: block;
+        width: 85px;
+        background: #222222;
+        text-align: center;
+        font-size: 1.1rem;
+        font-family: $head-text;
+        color: #fff;
+      }
+
+      p {
+        width: calc(100% - 85px);
+      }
+
+      span,
+      p {
+        padding: 20px;
+      }
+    }
+  }
+}
