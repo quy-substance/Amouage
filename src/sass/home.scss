@@ -10,7 +10,7 @@
     top: 29.6px;
     margin: auto;
     width: 100%;
-    z-index: 106;
+    z-index: 3;
 
     &__logo {
       width: 113.79px;
@@ -158,11 +158,15 @@ main section {
 
     h2 {
       font-size: 1.1rem;
+      font-family: $base-text;
+      letter-spacing: .3px;
     }
 
     h3 {
       font-size: 1.3rem;
-      font-weight: 600;
+      font-weight: 700;
+      font-family: $base-text;
+      letter-spacing: .2px;
     }
   }
 }

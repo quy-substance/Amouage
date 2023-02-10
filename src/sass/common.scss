@@ -64,9 +64,10 @@ body {
   scroll-behavior: smooth;
   background: #fff;
   color: $color-text;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-family: "Hiragino Mincho ProN";
   font-weight: 400;
+  letter-spacing: .5px;
   font-style: normal;
   overflow: hidden;
 }
@@ -90,12 +91,12 @@ body {
 }
 
 main {
-  line-height: 2;
+  line-height: 1.5;
   max-width: 768px;
   margin: 0 auto;
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   h2 {
@@ -109,28 +110,6 @@ main {
   }
 }
 
-@include sp {
-  main {
-    line-height: 1.5;
-
-    p {
-      font-size: 1.4rem;
-    }
-
-    h2 {
-      font-size: 2.2rem;
-    }
-
-    h3 {
-      font-size: $fontsize-title;
-      line-height: $lineheight-title;
-    }
-
-    section {
-      padding: 60px 0;
-    }
-  }
-}
 
 a[href^="tel:"] {
   pointer-events: none;
@@ -172,6 +151,10 @@ li {
   margin: 0 auto;
   padding: 0 30px;
   overflow: hidden;
+
+  &.pd20 {
+    padding: 0 20px;
+  }
 }
 
 
@@ -235,6 +218,7 @@ button {
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
+  cursor: pointer;
 
   &:hover {
     border-color: #000;
@@ -265,7 +249,7 @@ button {
     position: fixed;
     bottom: 0;
     width: 100%;
-    transition: all 500ms ease;
+    // transition: all 500ms ease;
     background-color: #ffffff;
 
     &__list {
@@ -364,8 +348,8 @@ button {
 
 .l {
   &-sidebar {
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     left: 0;
     -webkit-transform: translate3d(101%, 0, 0);
     transform: translate3d(101%, 0, 0);

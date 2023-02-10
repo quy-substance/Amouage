@@ -143,5 +143,25 @@ $(document).ready(function ($) {
     $("html,body").scrollTop(0);
     return false;
   });
+
+  // girls list
+  $('.js-slider4').slick({
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: false,
+    arrows: false
+  });
+  $('.js-showFilter').click(function () {
+    $(this).toggleClass('is-show');
+    $(this).parent().find('.c-dropFilter__List').slideToggle();
+  })
+  $('.c-dropFilter__List li').click(function (e) {
+    e.preventDefault();
+    const value = $(this).find('a').html();
+    $('.c-dropFilter__title span').html(value);
+    $('.c-dropFilter__List').slideUp();
+  })
 });
 
