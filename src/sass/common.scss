@@ -227,6 +227,17 @@ button {
   }
 }
 
+.btn--primary {
+  background: #9F8967;
+  border-color: #9F8967;
+  color: #fff;
+
+  &:hover {
+    border-color: #000;
+    background: #000;
+  }
+}
+
 .u-bkgGray {
   background-color: #F3F3F3;
 }

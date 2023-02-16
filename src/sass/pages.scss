@@ -251,7 +251,7 @@
   }
 
   .c-schedule {
-    margin: 53px 0;
+    margin: 53px 0 55px;
 
     h3 {
       font-size: 2rem;
@@ -262,24 +262,108 @@
     &__title {
       display: flex;
       background: #F3F3F3;
+      margin-bottom: 23px;
 
       span {
         display: block;
         width: 85px;
         background: #222222;
-        text-align: center;
         font-size: 1.1rem;
-        font-family: $head-text;
+
         color: #fff;
+        text-transform: uppercase;
       }
 
       p {
         width: calc(100% - 85px);
+        letter-spacing: 1px;
+        font-size: 1.2rem;
       }
 
       span,
       p {
-        padding: 20px;
+        padding: 12px 10px 11px;
+        text-align: center;
+        font-family: $head-text;
+      }
+    }
+
+    &__list {
+      display: flex;
+
+      &--day {
+        flex: 0 0 calc(100% / 6);
+        text-align: center;
+        font-family: $head-text;
+
+        p {
+          margin: 0;
+        }
+
+        .Days {
+          color: #999999;
+          font-family: $head-text;
+          border-radius: 50%;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto 10px;
+
+          span {
+            display: block;
+            font-size: 9px;
+
+            &:last-child {
+              color: #000;
+              font-size: 15px;
+            }
+          }
+        }
+
+        &.is-active {
+          .Days {
+            background-color: #F3F3F3;
+          }
+        }
+      }
+    }
+  }
+
+  .c-bannerArea {
+    background-image: url(../../assets/images/girls-list-detail/no42.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    padding: 37px 0 50px;
+
+    h2 {
+      font-size: 14px;
+      text-align: center;
+      font-weight: 700;
+      font-family: $base-text;
+      color: #fff;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    &__action {
+      display: flex;
+      gap: 11px;
+
+      .c-btn {
+        padding: 15px;
+        color: #fff;
+
+        &:not(.btn--primary) {
+          border-color: #7D7D7D;
+
+          &:hover {
+            border-color: #000;
+          }
+        }
       }
     }
   }
