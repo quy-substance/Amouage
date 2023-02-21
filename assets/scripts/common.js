@@ -177,5 +177,8 @@ $(document).ready(function ($) {
       return '<button><span style="background-image:url(' + $(slider.$slides[i]).data('thumb') + ');"></span></button>';
     }
   });
+  $('.js-clickScroll a').click(function () {
+    $("html,body").scrollTop(0);
+  })
 });
 

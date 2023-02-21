@@ -202,9 +202,28 @@ li {
   }
 }
 
+.u-center {
+  text-align: center;
+}
+
 button {
   background: none;
   outline: none;
+}
+
+.Icon-clickable {
+  position: relative;
+  background: transparent;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -8px;
+    right: -12px;
+    left: -12px;
+    bottom: -8px;
+    transform: translateZ(0);
+  }
 }
 
 .c-btn {
