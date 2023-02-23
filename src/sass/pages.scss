@@ -397,61 +397,7 @@
     margin-bottom: 26px;
   }
 
-  .c-Faq {
-    border-bottom: 1px solid #E3E3E3;
-    padding: 20px 0;
 
-    &:first-child {
-      border-top: 1px solid #E3E3E3;
-    }
-
-    span {
-      font-size: 11px;
-      font-family: $head-text;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      color: #fff;
-      background: #222222;
-      position: absolute;
-      top: 47%;
-      transform: translateY(-50%);
-    }
-
-    p {
-      padding-left: 31px;
-    }
-
-    &__title {
-      position: relative;
-      margin-bottom: 14px;
-
-      p {
-        font-size: 12px;
-        font-family: $base-text;
-        font-weight: 700;
-        letter-spacing: 2px;
-      }
-
-    }
-
-    &__content {
-      position: relative;
-
-      span {
-        background: #9F8967;
-      }
-
-      p {
-        font-size: 12px;
-
-      }
-    }
-  }
 
   .c-btn {
     margin-top: 31px;
@@ -461,6 +407,62 @@
       position: absolute;
       right: 19px;
       top: calc(50% - 6px);
+    }
+  }
+}
+
+.c-Faq {
+  border-bottom: 1px solid #E3E3E3;
+  padding: 20px 0;
+
+  &:first-child {
+    border-top: 1px solid #E3E3E3;
+  }
+
+  span {
+    font-size: 11px;
+    font-family: $head-text;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    background: #222222;
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+  }
+
+  p {
+    padding-left: 31px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 14px;
+
+    p {
+      font-size: 12px;
+      font-family: $base-text;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+  }
+
+  &__content {
+    position: relative;
+
+    span {
+      background: #9F8967;
+    }
+
+    p {
+      font-size: 12px;
+
     }
   }
 }
@@ -1248,6 +1250,129 @@
             margin-bottom: 21px;
           }
         }
+      }
+    }
+  }
+}
+
+/* Faq
+===================================================== */
+.p-faq {
+  .c-wishtlist {
+    margin-top: 60px;
+  }
+
+  .p-top3 {
+    margin-top: 0;
+  }
+
+  .p-faq1 {
+    margin-top: 50px;
+
+    li {
+      border-bottom: 1px solid #E5E5E5;
+
+      &:first-child {
+        border-top: 1px solid #E5E5E5;
+      }
+
+      a {
+        display: block;
+        position: relative;
+        padding: 22px 0;
+        font-size: 12px;
+        letter-spacing: 1px;
+
+        svg {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &__content {
+      .title {
+        font-size: 1.4rem;
+        font-family: $base-text;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin-top: 67px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .c-Faq {
+    border-top: 1px solid #E5E5E5;
+
+    &:last-child {
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    span {
+      width: 30px;
+      height: 30px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      padding-left: 48px;
+      padding-right: 30px;
+    }
+
+    &__title {
+      margin-bottom: 0;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background: #000;
+        transition: all .2s ease-in;
+      }
+
+      &::before {
+        top: 50%;
+        right: 10px;
+        width: 11px;
+        height: 1px;
+      }
+
+      &::after {
+        top: calc(50% - 5px);
+        right: 15px;
+        width: 1px;
+        height: 11px;
+      }
+
+      &.is-show {
+        &::before {
+          opacity: 0;
+        }
+
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+
+
+    &__content {
+      display: none;
+      margin-top: 14px;
+
+      span {
+        top: 20px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 22px;
+        letter-spacing: 1px;
+        padding-right: 0;
       }
     }
   }

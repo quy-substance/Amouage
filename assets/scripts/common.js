@@ -180,5 +180,19 @@ $(document).ready(function ($) {
   $('.js-clickScroll a').click(function () {
     $("html,body").scrollTop(0);
   })
+  $('.js-showFaq .c-Faq__title').click(function () {
+    $(this).toggleClass('is-show');
+    $(this).parent().find('.c-Faq__content').slideToggle();
+  })
+  $(document).on('click', 'a[href^="#"]', function (e) {
+    var id = $(this).attr('href');
+    var $id = $(id);
+    if ($id.length === 0) {
+      return;
+    }
+    e.preventDefault();
+    var pos = $id.offset().top - 50;
+    $('body, html').animate({ scrollTop: pos });
+  });
 });
 
